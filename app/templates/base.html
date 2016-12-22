@@ -12,7 +12,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Blog</a>
+                <a class="navbar-brand" href="/">hongWeb</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -25,10 +25,10 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     {% if current_user.is_authenticated %}
-                        <li><a href="{{ url_for('admin.logout') }}">登出</a></li>
+                        <li><a href="{{ url_for('admin.logout') }}">注销</a></li>
                     {% else %}
                         <li><a href="{{ url_for('admin.register') }}">注册</a></li>
-                        <li><a href="{{ url_for('admin.login') }}">登入</a></li>
+                        <li><a href="{{ url_for('admin.login') }}">登录</a></li>
                     {% endif %}
                 </ul>
             </div>

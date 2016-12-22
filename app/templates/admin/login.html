@@ -1,13 +1,18 @@
 {% extends "base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
 
+{% block title %}欢迎来到HongSh的空间{% endblock %}
 
 {% block page_content %}
     <div class="col-md-6">
-        <h1>登入博客</h1>
+        <h1>进入空间</h1>
         <hr>
         {{ wtf.quick_form(form) }}
     </div>
-    <div class="col-md-6">
+    <br/>
+    <div class="col-md-4">
+    	<br/>
+        <p>忘记密码? <a href="{{ url_for('admin.password_reset_request') }}">Click here to reset it</a>.</p>
+        <p>注册新用户? <a href="{{ url_for('admin.register') }}">Click here to register</a>.</p>
     </div>
 {% endblock %}
